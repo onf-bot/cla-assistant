@@ -32,6 +32,18 @@ let indexOptions = {
     background: true
 };
 
+let observers = []
+CLASchema.post('save', function(doc) {
+    logger.info('New CLA entry: %s', JSON.stringify(doc));
+    for (i in observers) {
+        try {
+            observers[i](doc);
+        } catch (error) {
+            logger.error(error, 'Error dispatching post-CLA save notification');
+        }
+    }
+});
+
 let CLA = mongoose.model('CLA', CLASchema);
 
 CLA.collection.dropAllIndexes(function (err, results) {
@@ -43,5 +55,8 @@ CLA.collection.dropAllIndexes(function (err, results) {
 CLA.collection.createIndex(index, indexOptions);
 
 module.exports = {
-    CLA: CLA
+    CLA: CLA,
+    listen: function (fn) {
+        observers.push(fn);
+    }
 };

@@ -14,6 +14,7 @@ let _ = require('lodash');
 module.exports = function () {
     let claService;
 
+    //TODO add support for Github basic auth
     let getGistObject = function (gist_url, token, done) {
         // let deferred = q.defer();
         let id = '';

@@ -42,6 +42,7 @@
     "merge": "^1.2.0",
     "mongoose": "^4.13.12",
     "node-sass-middleware": "^0.11.0",
+    "nodemailer": "^4.6.4",
     "passport": "^0.4.0",
     "passport-accesstoken": "^0.1.0",
     "passport-github": "^1.1.0",

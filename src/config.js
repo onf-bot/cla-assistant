@@ -71,6 +71,10 @@ module.exports = {
             name: 'cla-assistant'
         },
 
+        notification: {
+            email: process.env.NOTIFICATION_EMAIL
+        },
+
         mongodb: {
             uri: process.env.MONGODB || process.env.MONGOLAB_URI || process.env.MONGODB_URI
         },
