@@ -132,6 +132,7 @@ The following are the environment variables you have to configure to run a priva
 - `PORT`: The local port to bind to. Defaults to 5000.
 - `HOST_PORT`: You can set the port of your hosted CLA assistant instance here (in case your instnce doesn't use standard http ports like 80 or 443).
 - `PROTOCOL`: Valid options are "http" or "https".
+- `ALL_REPOS`: This will enable CLA assistant on private as well as public repos. Use "true" to enable private repos.
 - `GITHUB_CLIENT`: From your registered application in GitHub.
 - `GITHUB_SECRET`: From your registered application in GitHub.
 - `GITHUB_USER`: For CLA assistant to comment on pull requests, it requires a GitHub account.
