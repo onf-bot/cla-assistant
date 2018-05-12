@@ -87,7 +87,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "postinstall": "bower install",
+    "postinstall": "bower install && grunt build",
     "test": "grunt test",
     "snyk-monitor": "snyk auth $SNYK_TOKEN && snyk monitor",
     "snyk-protect": "snyk protect",
