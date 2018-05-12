@@ -72,7 +72,7 @@ module.exports = {
         },
 
         mongodb: {
-            uri: process.env.MONGODB || process.env.MONGOLAB_URI
+            uri: process.env.MONGODB || process.env.MONGOLAB_URI || process.env.MONGODB_URI
         },
 
         slack: {
